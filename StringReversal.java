@@ -44,7 +44,7 @@ public class StringReversal {
 		final String ENDPOINT_FOR_VALIDATION = "http://challenge.code2040.org/api/reverse/validate";
 		final HttpPost request = new HttpPost(ENDPOINT_FOR_VALIDATION);
 		request.setEntity((new StringEntity("{\"token\":\"" + TOKEN_VALUE + "\",\"string\":\"" + reversedString + "\"}", 
-				ContentType.create("application/json"))));
+			ContentType.create("application/json"))));
 		final HttpResponse response = CLIENT.execute(request);
 			
 		System.out.println("\nSending 'POST' request to URL : " + ENDPOINT_FOR_VALIDATION);

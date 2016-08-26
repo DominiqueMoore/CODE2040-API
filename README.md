@@ -1,2 +1,3 @@
 # CODE2040-API
-code for the 2017 CODE2040 API challenge!
+
+This is my code for the 2017 CODE2040 API challenge!

@@ -22,7 +22,6 @@ import org.apache.http.impl.client.HttpClientBuilder;
 public class Registration {
 	
 	private final String TOKEN_VALUE = "d4198c3d90103fdfeb3b4bf85e52620f";
-	private final HttpClient CLIENT = HttpClientBuilder.create().build();
 	
 	private void handleAPIRequest() throws ClientProtocolException, IOException {
 		makeRegistrationRequest();
@@ -31,6 +30,7 @@ public class Registration {
 	private void makeRegistrationRequest() throws ClientProtocolException, IOException {
 		final String GITHUB = "https://github.com/DominiqueMoore/CODE2040-API";
 		final String ENDPOINT_FOR_RETRIEVAL = "http://challenge.code2040.org/api/register";
+		final HttpClient CLIENT = HttpClientBuilder.create().build();
 		HttpPost postRequest = new HttpPost(ENDPOINT_FOR_RETRIEVAL); //POST request
 		postRequest.setEntity((new StringEntity("{\"token\":\"" + TOKEN_VALUE + "\",\"github\":\"" + GITHUB + "\"}", 
 			ContentType.create("application/json"))));
